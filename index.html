@@ -3,16 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Namuu Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #007bff;
+        }
+        main {
+            margin-top: 80px;
+        }
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #home {
+            text-align: center;
+            background-color: #fff;
+        }
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        #home .tagline {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        #home .welcome {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        #home img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        #about {
+            background-color: #f8f9fa;
+        }
+        #about h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        #about p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        .skills {
+            margin-top: 2rem;
+        }
+        .skills h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .skills ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .skills li {
+            background-color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        #projects {
+            background-color: #fff;
+        }
+        #projects h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-card h3 {
+            margin-bottom: 0.5rem;
+            color: #007bff;
+        }
+        .project-card p {
+            font-size: 1rem;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        @media (max-width: 768px) {
+            #home h1 {
+                font-size: 2rem;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
             </ul>
         </nav>
@@ -20,31 +183,97 @@
 
     <main>
         <section id="home">
-            <h1>Welcome to My Portfolio</h1>
-            <p>This is a showcase of my work and projects.</p>
+            <img src="https://via.placeholder.com/200x200?text=Profile+Photo" alt="Profile Photo">
+            <h1>Namuu</h1>
+            <p class="tagline">Grade 12 Student | Science Enthusiast | Future Researcher</p>
+            <p class="welcome">Welcome to my personal portfolio. Here, you'll find information about my background, skills, and projects that showcase my passion for science and innovation.</p>
+            <a href="#about" class="btn">Learn More About Me</a>
         </section>
 
         <section id="about">
             <h2>About Me</h2>
-            <p>My name is [Your Name], and I am a web developer.</p>
+            <p>Hi! My name is Namuun. I am a Grade 12 student who is deeply passionate about science, especially biology and chemistry, and how they can be used to solve real-world problems. My interest in science didn’t just come from school, but from my own life experiences, which made me see it as something meaningful and powerful rather than just academic.</p>
+            <p>Over the years, I have pushed myself to go beyond the classroom by exploring topics like regenerative medicine, chemistry education, and scientific research. I’ve also worked on building a chemistry platform for high school students, where I create content and collaborate with a team to make science more accessible and engaging.</p>
+            <p>I believe in continuous growth, curiosity, and using knowledge to make a real impact. Whether it’s through research, projects, or sharing knowledge with others, I am committed to learning deeply and contributing creative and meaningful ideas.</p>
+            <div class="skills">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Research</li>
+                    <li>Leadership</li>
+                    <li>Communication</li>
+                    <li>Science Writing</li>
+                    <li>Teamwork</li>
+                </ul>
+            </div>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <div class="project"> 
-                <h3>Project 1</h3>
-                <p>Description of Project 1.</p>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Kidney Nutrition Guide Initiative</h3>
+                    <p>Independent public health project. Authored a renal diet guide reviewed by 3 dietitians; 35% of 350+ patients reported improved understanding across 15+ hospitals.</p>
+                </div>
+                <div class="project-card">
+                    <h3>CRISPR-Cas9 Research</h3>
+                    <p>Published research in Curieux Journal analyzing 20+ studies on clinical applications, ethics, and translational challenges.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Chem_Medeh_UU (President & Founder)</h3>
+                    <p>Co-founded a national chemistry platform; led workshops, managed 10 interns, and created content reaching 250K+ views.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Young Engineers of Mongolia (General Manager)</h3>
+                    <p>Expanded 15 branches, engaged 200+ students, led engineering projects and leadership workshops.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Znotes Ambassador</h3>
+                    <p>Tutored 150+ IGCSE Chemistry students; 45% achieved A grades. Conducted workshops on exam strategies and mental health.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Healthcare Intern</h3>
+                    <p>Worked 150+ hours managing patient coordination and hospital systems; contributed to nutrition guide development.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Luminis Science Club (Co-founder & VP)</h3>
+                    <p>Organized labs, national visits, and field research programs for students.</p>
+                </div>
             </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of Project 2.</p>
-            </div>
-            <!-- Add more projects here -->
         </section>
     </main>
 
     <footer>
-        <p>© 2026 [Your Name]. All rights reserved.</p>
+        <p>© 2026 Namuun</p>
     </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s, transform 0.6s';
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
